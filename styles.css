@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto; 
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 50px 0;
+  font-weight: 300;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#quotes-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  width: 90vw; 
+  gap: 20px; 
+  padding: 20px 0; 
+}
+
+.quote-container {
+  text-align: center;
+  flex: 1 1 auto; 
+  max-width: 300px; 
+  border: none; 
+  padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.2s; 
+  border-radius: 10px;
+}
+
+.quote-container:hover {
+  transform: scale(1.05); 
+}
+
+.quote {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.github-link {
+  display: block;
+  color: #00aced;
+  text-decoration: none;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 2px solid #000; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; 
+  }
+
+  .quote {
+    font-size: 1.2rem; 
+  }
+
+  .name {
+    font-size: 1rem; 
+  }
+
+  .quote-container {
+    flex: 1 1 calc(45% - 40px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-container {
+    flex: 1 1 100%; 
+  }
+}
